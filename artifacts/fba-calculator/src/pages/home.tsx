@@ -41,7 +41,18 @@ export default function Home() {
       shippingCost: 0,
     },
   });
+const [isPremium, setIsPremium] = useState(false);
+  useEffect(() => {
+  const email = localStorage.getItem("user_email");
 
+  if (!email) return;
+
+  fetch(`https://fba-tool-api.onrender.com/check-premium?email=${email}`)
+    .then(res => res.json())
+    .then(data => {
+      setIsPremium(data.premium);
+    });
+}, []);
   const onSubmit = (data: CalculatorValues) => {
     setIsCalculating(true);
     setTimeout(() => {
