@@ -72,7 +72,7 @@ const [isPremium, setIsPremium] = useState(false);
     }
     if (!isPremium && products.length >= FREE_LIMIT) {
   alert("🚫 Limite gratuite atteinte (2 produits).\nPasse en Premium pour continuer.");
-  window.open("https://buy.stripe.com/test_00w7sNbocfaTelCeSTaR202", "_blank");
+  window.open("https://buy.stripe.com/9B6fZjak8e6PelCeSTaR205", "_blank");
   return;
 }
     const { profit, margin, roi, score } = calcMetrics(
@@ -343,7 +343,7 @@ const [isPremium, setIsPremium] = useState(false);
                                 Limite atteinte — version gratuite (2 produits max)
                               </p>
                               <a
-                                href="https://buy.stripe.com/9B6eVfgIwd2LelC123aR200"
+                                href="https://buy.stripe.com/9B6fZjak8e6PelCeSTaR205"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 w-full h-11 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-bold shadow-md shadow-amber-500/30 hover:shadow-lg hover:shadow-amber-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
