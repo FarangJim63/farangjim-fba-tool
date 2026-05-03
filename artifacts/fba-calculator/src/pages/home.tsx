@@ -382,25 +382,7 @@ const [isPremium, setIsPremium] = useState(false);
         {!isPremium && (
   <div style={{ marginTop: "20px", textAlign: "center" }}>
     <button
-      onClick={() => window.open("https://buy.stripe.com/test_00w7sNbocfaTelCeSTaR202", "_blank")}
-      style={{
-        background: "#6366f1",
-        color: "white",
-        padding: "12px 20px",
-        borderRadius: "8px",
-        border: "none",
-        cursor: "pointer",
-        fontWeight: "bold"
-      }}
-    >
-      🔓 Passer en Premium (9,90€/mois)
-    </button>
-  </div>
-)}
-        {!isPremium && (
-  <div style={{ marginTop: "20px", textAlign: "center" }}>
-    <button
-      onClick={() => window.open("https://buy.stripe.com/test_6oUaEZ4ZO4wfb9q7qraR203", "_blank")}
+      onClick={() => window.open("https://buy.stripe.com/test_8x200l0Jy3sbb9q123aR204", "_blank")}
       style={{
         background: "#6366f1",
         color: "white",
