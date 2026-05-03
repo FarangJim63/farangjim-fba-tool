@@ -381,6 +381,7 @@ const [isPremium, setIsPremium] = useState(false);
         />
         {!isPremium && (
   <div style={{ marginTop: "20px", textAlign: "center" }}>
+alert("NEW VERSION");
     <button
       onClick={() => {
   alert("CLICK OK");
