@@ -400,7 +400,7 @@ const [isPremium, setIsPremium] = useState(false);
         {!isPremium && (
   <div style={{ marginTop: "20px", textAlign: "center" }}>
     <button
-      onClick={() => window.open("https://buy.stripe.com/test_00w7sNbocfaTelCeSTaR202", "_blank")}
+      onClick={() => window.open("https://buy.stripe.com/test_6oUaEZ4ZO4wfb9q7qraR203", "_blank")}
       style={{
         background: "#6366f1",
         color: "white",
