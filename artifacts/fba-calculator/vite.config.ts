@@ -6,6 +6,10 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
   base: "/",
+  build: {
+  outDir: "dist",
+  emptyOutDir: true,
+},
   plugins: [
     react(),
     tailwindcss(),
