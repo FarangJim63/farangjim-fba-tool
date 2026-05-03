@@ -382,16 +382,10 @@ const [isPremium, setIsPremium] = useState(false);
         {!isPremium && (
   <div style={{ marginTop: "20px", textAlign: "center" }}>
     <button
-      onClick={() => window.open("https://buy.stripe.com/9B6fZjak8e6PelCeSTaR205", "_blank")}
-      style={{
-        background: "#6366f1",
-        color: "white",
-        padding: "12px 20px",
-        borderRadius: "8px",
-        border: "none",
-        cursor: "pointer",
-        fontWeight: "bold"
-      }}
+      onClick={() => {
+  alert("CLICK OK");
+  window.open("https://buy.stripe.com/9B6fZjak8e6PeICeSTaR205", "_blank");
+}}
     >
       🔓 Passer en Premium (9,90€/mois)
     </button>
