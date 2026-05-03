@@ -57,17 +57,17 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
-    port,
-    host: "0.0.0.0",
-    allowedHosts: true,
-    fs: {
-      strict: true,
-      deny: ["**/.*"],
-    },
+  port: 3000,
+  host: "0.0.0.0",
+  allowedHosts: true,
+  fs: {
+    strict: true,
+    deny: ["**/*"],
   },
-  preview: {
-    port,
-    host: "0.0.0.0",
-    allowedHosts: true,
-  },
+},
+preview: {
+  port: 3000,
+  host: "0.0.0.0",
+  allowedHosts: true,
+},
 });
