@@ -70,9 +70,11 @@ const [isPremium, setIsPremium] = useState(false);
       form.setError("productName", { message: "Nom requis pour sauvegarder" });
       return;
     }
-    if (products.length >= FREE_LIMIT) {
-      return;
-    }
+    if (!isPremium && products.length >= FREE_LIMIT) {
+  alert("🚫 Limite gratuite atteinte (2 produits).\nPasse en Premium pour continuer.");
+  window.open("https://buy.stripe.com/test_00w7sNbocfaTelCeSTaR202", "_blank");
+  return;
+}
     const { profit, margin, roi, score } = calcMetrics(
       results.sellingPrice,
       results.productCost,
@@ -377,6 +379,24 @@ const [isPremium, setIsPremium] = useState(false);
           onRemove={removeProduct}
           onClearAll={clearAll}
         />
+        {!isPremium && (
+  <div style={{ marginTop: "20px", textAlign: "center" }}>
+    <button
+      onClick={() => window.open("https://buy.stripe.com/test_00w7sNbocfaTelCeSTaR202", "_blank")}
+      style={{
+        background: "#6366f1",
+        color: "white",
+        padding: "12px 20px",
+        borderRadius: "8px",
+        border: "none",
+        cursor: "pointer",
+        fontWeight: "bold"
+      }}
+    >
+      🔓 Passer en Premium (9,90€/mois)
+    </button>
+  </div>
+)}
       </main>
     </div>
   );
