@@ -93,7 +93,7 @@ export function ProductList({ products, onRemove, onClearAll }: ProductListProps
               <Lock className="w-3.5 h-3.5" /> Limite atteinte — {FREE_LIMIT}/{FREE_LIMIT} produits sauvegardés
             </p>
             <a
-              href="https://buy.stripe.com/9B6fZjak8e6PelCeSTaR205"
+              href="https://buy.stripe.com/9B6eVfgIwd2LelC123aR200"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full h-11 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-bold shadow-md shadow-amber-500/30 hover:shadow-lg hover:shadow-amber-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"

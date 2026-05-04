@@ -41,18 +41,7 @@ export default function Home() {
       shippingCost: 0,
     },
   });
-const [isPremium, setIsPremium] = useState(false);
-  useEffect(() => {
-  const email = localStorage.getItem("user_email");
 
-  if (!email) return;
-
-  fetch(`https://fba-tool-api.onrender.com/check-premium?email=${email}`)
-    .then(res => res.json())
-    .then(data => {
-      setIsPremium(data.premium);
-    });
-}, []);
   const onSubmit = (data: CalculatorValues) => {
     setIsCalculating(true);
     setTimeout(() => {
@@ -70,11 +59,9 @@ const [isPremium, setIsPremium] = useState(false);
       form.setError("productName", { message: "Nom requis pour sauvegarder" });
       return;
     }
-    if (!isPremium && products.length >= FREE_LIMIT) {
-  alert("🚫 Limite gratuite atteinte (2 produits).\nPasse en Premium pour continuer.");
-  window.open("https://buy.stripe.com/9B6fZjak8e6PelCeSTaR205", "_blank");
-  return;
-}
+    if (products.length >= FREE_LIMIT) {
+      return;
+    }
     const { profit, margin, roi, score } = calcMetrics(
       results.sellingPrice,
       results.productCost,
@@ -343,7 +330,7 @@ const [isPremium, setIsPremium] = useState(false);
                                 Limite atteinte — version gratuite (2 produits max)
                               </p>
                               <a
-                                href="https://buy.stripe.com/9B6fZjak8e6PelCeSTaR205"
+                                href="https://buy.stripe.com/9B6eVfgIwd2LelC123aR200"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 w-full h-11 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-bold shadow-md shadow-amber-500/30 hover:shadow-lg hover:shadow-amber-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
@@ -379,21 +366,7 @@ const [isPremium, setIsPremium] = useState(false);
           onRemove={removeProduct}
           onClearAll={clearAll}
         />
-        {!isPremium && (
-  <div style={{ marginTop: "20px", textAlign: "center" }}>
-alert("NEW VERSION");
-    <button
-      onClick={() => {
-  alert("CLICK OK");
-  window.open("https://buy.stripe.com/9B6fZjak8e6PeICeSTaR205", "_blank");
-}}
-    >
-      🔓 Passer en Premium (9,90€/mois)
-    </button>
-  </div>
-)}
       </main>
     </div>
   );
 }
-// force redeploy
