@@ -18,7 +18,7 @@ if (Number.isNaN(port) || port <= 0) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
 }
 
-const basePath = './';
+const basePath = '/artifacts/fba-calculator/';
 
 export default defineConfig({
   base: basePath,
